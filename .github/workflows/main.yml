@@ -8,9 +8,12 @@ on:
 
 jobs:
   eslint_check:
-    name: Prepare action
+    name: ESLint Checks
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
     - name: Checkout 
       uses: actions/checkout@v4
     - name: Lint
@@ -22,8 +25,12 @@ jobs:
         eslintExt: "ts, vue"
 
   cypress-run:
+    name: Run Cypress Tests
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cypress run
