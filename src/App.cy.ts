@@ -22,6 +22,11 @@ describe("<Home />", () => {
     it("should open the menu on menu-button click", () => {
       context.AppBar.MenuButton.click();
       context.NavigationDrawer.Items.should("be.visible");
+    });
+
+    it("should show details view when clicking each name", () => {
+      context.AppBar.MenuButton.click();
+      context.NavigationDrawer.Items.should("be.visible");
 
       context.NavigationDrawer.itemAtIndex(0).should("have.text", "Bob");
       context.NavigationDrawer.itemAtIndex(0).click();
