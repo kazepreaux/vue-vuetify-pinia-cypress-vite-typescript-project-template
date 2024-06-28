@@ -11,7 +11,8 @@ jobs:
     name: ESLint Checks
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-node@v4
+    - name: Use Node.js 18
+      uses: actions/setup-node@v1
       with:
         node-version: 18
     - name: Checkout 
@@ -21,16 +22,13 @@ jobs:
       with:
         ghToken: ${{ secrets.GITHUB_TOKEN }}
         eslintFiles: "lib, scripts"
-        eslintConfig: "myConfigs/eslint.config.js"
+        eslintConfig: "eslint.config.js"
         eslintExt: "ts, vue"
 
   cypress-run:
     name: Run Cypress Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cypress run
