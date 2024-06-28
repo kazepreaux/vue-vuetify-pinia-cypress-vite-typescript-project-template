@@ -12,7 +12,7 @@ Tests can be ran using the following command:
 Tests can also be run on the browser using the command below:
 `npx cypress open --component --browser chrome`
 
-
+```
   _    _                            _____          _ _              
  | |  | |                          / ____|        | (_)             
  | |__| | __ _ _ __  _ __  _   _  | |     ___   __| |_ _ __   __ _  
@@ -21,3 +21,4 @@ Tests can also be run on the browser using the command below:
  |_|  |_|\__,_| .__/| .__/ \__, |  \_____\___/ \__,_|_|_| |_|\__, | 
               | |   | |     __/ |                             __/ | 
               |_|   |_|    |___/                             |___/  
+```
